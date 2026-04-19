@@ -1,2 +1,3 @@
 FROM ghcr.io/openlistteam/openlist-git:latest
-EXPOSE 5244
+USER root
+RUN mkdir -p /opt/openlist/data && chmod -R 777 /opt/openlist
