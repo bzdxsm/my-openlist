@@ -20,4 +20,5 @@ RUN wget https://github.com/cloudflare/cloudflared/releases/latest/download/clou
 EXPOSE 5244
 
 # 这里的密码我帮你设回你原来的那个 O8fxnDxV
-CMD OPENLIST_ADMIN_PASSWORD=O8fxnDxV ./openlist server & /app/cloudflared tunnel --no-autoupdate run --token eyJhIjoiMTlmNzYxMmI1MmMyM2Q5ZjJlYzhhMzlmYzdjMGI4MzkiLCJ0IjoiODVlMzI1NTUtNDk5NS00OWI4LWE2M2QtOTI1OTM3ZTQ0MTc2IiwicyI6Ik1XRTVZelZrWTJNdFlUbGpOUzAwT1Raa0xUbG1ZekV0Tm1VME4yWXpOakV5TVdJMCJ9
+# 使用变量代替具体值
+CMD ./openlist server & /app/cloudflared tunnel --no-autoupdate run --token ${MY_CF_TOKEN}
