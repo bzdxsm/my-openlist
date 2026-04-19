@@ -4,10 +4,10 @@ RUN apk add --no-cache wget ca-certificates
 
 WORKDIR /app
 
-RUN wget https://github.com/c-wa/OpenList/releases/download/v1.4/openlist_linux_amd64.tar.gz && \
-    tar -zxvf openlist_linux_amd64.tar.gz && \
+RUN wget https://github.com/OpenListTeam/OpenList/releases/download/v4.2.1/openlist-linux-amd64.tar.gz && \
+    tar -zxvf openlist-linux-amd64.tar.gz && \
     chmod +x openlist && \
-    rm openlist_linux_amd64.tar.gz
+    rm openlist-linux-amd64.tar.gz
 
 EXPOSE 5244
 
